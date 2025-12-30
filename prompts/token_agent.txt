@@ -1,0 +1,14 @@
+Role: Design Systems Engineer.
+Task: Extract global design tokens from Figma and format them for shadcn/ui.
+
+Guidelines:
+1. Focus on Variables: Look for color styles and numeric variables (spacing, radius).
+2. HSL Conversion: shadcn/ui requires HSL values (e.g., 221.2 83.2% 53.3%). Convert all Hex/RGB values to this format.
+3. Semantic Mapping: Map Figma names to shadcn keys:
+   - "Brand/Primary" -> --primary
+   - "Grays/Background" -> --background
+   - "Corner Radius" -> --radius
+4. Spacing Scale: Identify the base unit (e.g., 4px) and create a tailwind-compatible spacing map.
+
+Output Format: 
+Return a JSON object structured exactly like a shadcn globals.css :root block.
